@@ -8,6 +8,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { CardComponent } from './card/card.component';
 import { FilterComponent } from './filter/filter.component';
 import {FormsModule} from "@angular/forms";
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {FormsModule} from "@angular/forms";
     NavigationComponent,
     CoursesComponent,
     CardComponent,
-    FilterComponent
+    FilterComponent,
+    SearchComponent
   ],
     imports: [
         BrowserModule,
