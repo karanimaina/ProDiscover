@@ -1,3 +1,18 @@
-<div >
-  <app-navigation></app-navigation>
+<div class="bg-slate-400">
+  <div class="grid grid-cols-1 p-8 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" >
+    <app-navigation></app-navigation>
+  </div>
+  <div class="grid grid-cols-1 p-8 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" >
+    <app-courses class=" transition-transform transform hover:scale-105 cursor-pointer duration-300 ease-in-out hover:bg-white" *ngFor="let course  of courses" [data]="course"></app-courses>
+  </div>
+<!--  <div class="grid grid-cols-1 p-8 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" >-->
+<!--    <app-card class=" transition-transform transform hover:scale-105 cursor-pointer duration-300 ease-in-out" *ngFor="let post of posts" [data]="post"></app-card>-->
+<!--  </div>-->
 </div>
+
+
+
+
+
+
+
