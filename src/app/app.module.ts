@@ -7,6 +7,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CardComponent } from './card/card.component';
 import { FilterComponent } from './filter/filter.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,10 +17,11 @@ import { FilterComponent } from './filter/filter.component';
     CardComponent,
     FilterComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

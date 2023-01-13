@@ -90,16 +90,30 @@ export class AppComponent {
     },
   ];
   courses = [
-    {id:1, name:'JavaScript for beginners',author:"Felix", duration:54 ,type:'free',price :0.0,rating:5.5,image:'assets/Javascript.png' ,description:'in this course you will learn about the fundamentals of javascript'},
-    {id:1, name:'Html (intermediate)',author:"James Helsing", duration: 54,type:'premium',price :0.0,rating:5.5,image:'assets/Html5.jpeg' ,description:'in this course you will learn  about Html elements and design a webpage'},
-    {id:1, name:'Css (Design Architecture)',author:"Ken Maina", duration: 48,type:'free',price :0.0,rating:5.5,image:'assets/Css.jpeg' ,description:'level up your design skills by undertaking this Css'},
-    {id:1, name:'Angular for beginners',author:"Felix", duration: 48,type:'premium',price :0.0,rating:5.5,image:'assets/Angular.jpeg' ,description:'Challenge  yourself int web development by building customised websites '},
-    {id:1, name:'BlockChain',author:"Felix", duration: 48,type:'premium',price :0.0,rating:5.5,image:'assets/blockchain.jpeg' ,description:'Gain the know how of block chain in app development'},
-    {id:1, name:'Artificial Intelligence for beginners',author:"Felix", duration: 48,type:'free',price :0.0,rating:5.5,image:'assets/AI.jpeg' ,description:'int this course you will learn about the fundamentals of Artificial intelligence'},
-    {id:1, name:'React(Advanced)',author:"Felix", duration: 48,type:'premium',price :0.0,rating:5.5,image:'assets/React.jpeg' ,description:'int this course you will learn about the fundamentals of React'},
-    {id:1, name:'Android',author:"Felix", duration: 48,type:'premium',price :0.0,rating:5.5,image:'assets/Android.jpeg' ,description:'learn OOP concepts using kotlin '},
-    {id:1, name:'Kotlin',author:"Felix", duration: 48,type:'free',price :0.0,rating:5.5,image:'assets/Kotlin.jpeg' ,description:'learn OOP concepts using kotlin '},
-    {id:1, name:'Python (Advanced)',author:"Felix", duration: 48,type:'premium',price :0.0,rating:5.5,image:'assets/Python.jpeg' ,description:'gain skills in Api development using python and django'},
-    {id:1, name:'Ui/Ux for beginners',author:"Felix", duration: 48,type:'premium',price :0.0,rating:5.5,image:'assets/UiUx.jpeg' ,description:'gain technical skills on of UI/UX'},
+    {id:1, name:'JavaScript for beginners',author:"Felix", duration:54 ,type:'Free',price :0.0,rating:5.5,image:'assets/Javascript.png' ,description:'in this course you will learn about the fundamentals of javascript'},
+    {id:1, name:'Html (intermediate)',author:"James Helsing", duration: 54,type:'Premium',price :0.0,rating:5.5,image:'assets/Html5.jpeg' ,description:'in this course you will learn  about Html elements and design a webpage'},
+    {id:1, name:'Css (Design Architecture)',author:"Ken Maina", duration: 48,type:'Free',price :0.0,rating:5.5,image:'assets/Css.jpeg' ,description:'level up your design skills by undertaking this Css'},
+    {id:1, name:'Angular for beginners',author:"Felix", duration: 48,type:'Premium',price :0.0,rating:5.5,image:'assets/Angular.jpeg' ,description:'Challenge  yourself int web development by building customised websites '},
+    {id:1, name:'BlockChain',author:"Felix", duration: 48,type:'Premium',price :0.0,rating:5.5,image:'assets/blockchain.jpeg' ,description:'Gain the know how of block chain in app development'},
+    {id:1, name:'Artificial Intelligence for beginners',author:"Felix", duration: 48,type:'Free',price :0.0,rating:5.5,image:'assets/AI.jpeg' ,description:'int this course you will learn about the fundamentals of Artificial intelligence'},
+    {id:1, name:'React(Advanced)',author:"Felix", duration: 48,type:'Premium',price :0.0,rating:5.5,image:'assets/React.jpeg' ,description:'int this course you will learn about the fundamentals of React'},
+    {id:1, name:'Android',author:"Felix", duration: 48,type:'Premium',price :0.0,rating:5.5,image:'assets/Android.jpeg' ,description:'learn OOP concepts using kotlin '},
+    {id:1, name:'Kotlin',author:"Felix", duration: 48,type:'Free',price :0.0,rating:5.5,image:'assets/Kotlin.jpeg' ,description:'learn OOP concepts using kotlin '},
+    {id:1, name:'Python (Advanced)',author:"Felix", duration: 48,type:'Premium',price :0.0,rating:5.5,image:'assets/Python.jpeg' ,description:'gain skills in Api development using python and django'},
+    {id:1, name:'Ui/Ux for beginners',author:"Felix", duration: 48,type:'Premium',price :0.0,rating:5.5,image:'assets/UiUx.jpeg' ,description:'gain technical skills on of UI/UX'},
   ]
+  getTotalCourses(){
+    return this.courses.length
+  }
+  getTotalFreeCourses(){
+    return this.courses.filter(courses => courses.type === 'free').length
+  }
+  getTotalPremiumCourses(){
+    return this.courses.filter(courses => courses.type === 'premium').length
+  }
+  courseCountRadioButton :string = 'All'
+  onFilterRadioButtonChanged(data :string){
+    this.courseCountRadioButton = data
+    console.log(this.courseCountRadioButton)
+  }
 }
