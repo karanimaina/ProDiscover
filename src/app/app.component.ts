@@ -89,6 +89,7 @@ export class AppComponent {
       postDate: '10th August 2020',
     },
   ];
+  searchText: string = '';
   courses = [
     {id:1, name:'JavaScript for beginners',author:"Felix", duration:54 ,type:'Free',price :0.0,rating:5.5,image:'assets/Javascript.png' ,description:'in this course you will learn about the fundamentals of javascript'},
     {id:1, name:'Html (intermediate)',author:"James Helsing", duration: 54,type:'Premium',price :0.0,rating:5.5,image:'assets/Html5.jpeg' ,description:'in this course you will learn  about Html elements and design a webpage'},
@@ -102,6 +103,7 @@ export class AppComponent {
     {id:1, name:'Python (Advanced)',author:"Felix", duration: 48,type:'Premium',price :0.0,rating:5.5,image:'assets/Python.jpeg' ,description:'gain skills in Api development using python and django'},
     {id:1, name:'Ui/Ux for beginners',author:"Felix", duration: 48,type:'Premium',price :0.0,rating:5.5,image:'assets/UiUx.jpeg' ,description:'gain technical skills on of UI/UX'},
   ]
+
   getTotalCourses(){
     return this.courses.length
   }
@@ -115,5 +117,10 @@ export class AppComponent {
   onFilterRadioButtonChanged(data :string){
     this.courseCountRadioButton = data
     console.log(this.courseCountRadioButton)
+  }
+  onTextChanged(data:string){
+    this.searchText=data
+    console.log(this.searchText)
+
   }
 }
