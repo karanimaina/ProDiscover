@@ -18,6 +18,7 @@
       <div *ngIf="courseCountRadioButton==='All' || courseCountRadioButton ===course.type ">
       <app-courses class=" transition-transform transform hover:scale-105 cursor-pointer duration-300 ease-in-out hover:bg-white"  [data]="course" *ngIf="searchText===''||course.name.toLowerCase().includes(searchText) "></app-courses>
       </div>
+
     </ng-container>
 
 
