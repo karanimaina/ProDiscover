@@ -12,13 +12,15 @@
 
     ></app-filter>
 
+
   </div>
   <div class="grid grid-cols-1 p-8 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" >
-    <ng-container *ngFor="let course  of courses">
+    <ng-container  *ngFor="let course  of courses">
       <div *ngIf="courseCountRadioButton==='All' || courseCountRadioButton ===course.type ">
       <app-courses class=" transition-transform transform hover:scale-105 cursor-pointer duration-300 ease-in-out hover:bg-white"  [data]="course" *ngIf="searchText===''||course.name.toLowerCase().includes(searchText) "></app-courses>
       </div>
-    </ng-container>
+
+ </ng-container>
 
 
 
